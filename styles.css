@@ -176,7 +176,19 @@ blockquote { margin: 30px 0; padding: 6px 0 6px 24px; border-left: 4px solid var
   .footer-grid { grid-template-columns: 1fr; gap: 22px; }
   .footer-note { text-align: left; }
 }
+@media (max-width: 620px) {
+  .hero {
+    overflow: visible;
+  }
 
+  .hero-grid {
+    gap: 28px;
+  }
+
+  .hero-panel {
+    margin-top: 8px;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .button { transition: none; }
