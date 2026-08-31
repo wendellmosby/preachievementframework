@@ -131,6 +131,30 @@ h3 { font-size: 21px; margin-bottom: 10px; }
 .report-copy > p { color: var(--muted); font-size: 18px; }
 blockquote { margin: 30px 0; padding: 6px 0 6px 24px; border-left: 4px solid var(--gold); color: var(--navy); font-size: 23px; font-weight: 680; line-height: 1.38; }
 
+.speaking { background: #fff; }
+.speaking-heading { max-width: none; display: grid; grid-template-columns: 1fr .9fr; gap: 70px; align-items: end; }
+.speaking-heading p:last-child { margin: 0; color: var(--muted); font-size: 18px; }
+.signature-session { display: grid; grid-template-columns: 1.08fr .92fr; gap: 54px; padding: 42px; border-radius: 20px; background: var(--navy); color: white; box-shadow: var(--shadow); }
+.signature-session h3 { max-width: 690px; color: white; font-size: clamp(28px, 3vw, 40px); }
+.signature-session p { color: #d2dce7; }
+.session-outcomes { padding: 26px 28px; border: 1px solid rgba(255,255,255,.12); border-radius: 14px; background: rgba(255,255,255,.06); }
+.session-outcomes h4 { margin: 0 0 14px; color: var(--gold); font-size: 15px; }
+.session-outcomes ul, .offer-card ul { margin: 0; padding-left: 20px; }
+.session-outcomes li + li, .offer-card li + li { margin-top: 8px; }
+.offers-heading { margin: 66px 0 28px; }
+.offers-heading h2 { margin-bottom: 0; }
+.offer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; align-items: stretch; }
+.offer-card { padding: 30px; border: 1px solid var(--line); border-radius: 17px; background: var(--soft); }
+.offer-card h3 { min-height: 48px; }
+.offer-card > p:not(.offer-label):not(.offer-price), .offer-card ul { color: var(--muted); }
+.offer-featured { border-top: 5px solid var(--teal); background: #f0f8f7; transform: translateY(-8px); }
+.offer-label { margin: 0 0 14px; color: var(--teal-dark); font-size: 11px; font-weight: 850; text-transform: uppercase; letter-spacing: .11em; }
+.offer-price { margin: 20px 0 12px; color: var(--navy); font-size: 38px; font-weight: 850; line-height: 1; }
+.booking-band { margin-top: 48px; padding: 42px; display: grid; grid-template-columns: 1fr auto; gap: 50px; align-items: center; border-radius: 18px; background: var(--navy); color: white; }
+.booking-band h2 { color: white; font-size: clamp(30px, 3.5vw, 44px); }
+.booking-band p:not(.eyebrow) { max-width: 760px; margin-bottom: 0; color: #d2dce7; }
+.pricing-note { margin: 18px auto 0; max-width: 920px; color: var(--muted); font-size: 12px; text-align: center; }
+
 .about-grid { display: grid; grid-template-columns: 180px 1fr; gap: 44px; align-items: start; max-width: 920px; }
 .author-monogram { width: 160px; height: 160px; border-radius: 50%; display: grid; place-items: center; background: var(--navy); color: var(--gold); font-size: 40px; font-weight: 850; letter-spacing: -.04em; box-shadow: inset 0 0 0 9px rgba(255,255,255,.08); }
 .about-grid p { color: var(--muted); font-size: 17px; }
@@ -149,8 +173,10 @@ blockquote { margin: 30px 0; padding: 6px 0 6px 24px; border-left: 4px solid var
 @media (max-width: 920px) {
   .site-nav { display: none; }
   .hero { padding-top: 64px; }
-  .hero-grid, .report-grid, .inquiry-grid, .guardrail-grid { grid-template-columns: 1fr; gap: 42px; }
+  .hero-grid, .report-grid, .inquiry-grid, .guardrail-grid, .speaking-heading, .signature-session, .booking-band { grid-template-columns: 1fr; gap: 42px; }
   .card-grid { grid-template-columns: repeat(2, 1fr); }
+  .offer-grid { grid-template-columns: 1fr; }
+  .offer-featured { transform: none; }
   .report-cover { max-width: 420px; }
   .stat-grid { grid-template-columns: repeat(2, 1fr); }
   .stat:nth-child(2) { border-right: 0; }
@@ -171,6 +197,8 @@ blockquote { margin: 30px 0; padding: 6px 0 6px 24px; border-left: 4px solid var
   .stat span { font-size: 10px; }
   .report-cover { min-height: 470px; padding: 30px; }
   .report-cover h2 { font-size: 42px; }
+  .signature-session, .booking-band { padding: 30px 24px; }
+  .session-outcomes { padding: 22px 20px; }
   .about-grid { grid-template-columns: 1fr; }
   .author-monogram { width: 110px; height: 110px; font-size: 30px; }
   .footer-grid { grid-template-columns: 1fr; gap: 22px; }
