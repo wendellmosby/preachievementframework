@@ -233,3 +233,21 @@ blockquote { margin: 30px 0; padding: 6px 0 6px 24px; border-left: 4px solid var
   html { scroll-behavior: auto; }
   .button { transition: none; }
 }
+
+
+/* Conversion and proof additions */
+.practice { border-top: 1px solid var(--line); }
+.practice-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.practice-card { padding: 28px; border: 1px solid var(--line); border-radius: 17px; background: var(--white); box-shadow: 0 12px 32px rgba(20,40,70,.06); }
+.practice-card h3 { font-size: 23px; }
+.practice-card p:last-child { color: var(--muted); margin-bottom: 0; }
+.practice-step { margin: 0 0 18px; color: var(--teal-dark); font-size: 11px; font-weight: 850; text-transform: uppercase; letter-spacing: .11em; }
+.practice-note { margin-top: 22px; padding: 22px 24px; display: flex; gap: 12px; align-items: baseline; border-left: 4px solid var(--gold); background: #fbf8f1; color: var(--muted); }
+.practice-note strong { color: var(--navy); white-space: nowrap; }
+#wendell-mosby { position: relative; top: -90px; }
+
+@media (max-width: 920px) {
+  .practice-grid { grid-template-columns: 1fr; }
+  .practice-note { align-items: flex-start; flex-direction: column; }
+  .practice-note strong { white-space: normal; }
+}
