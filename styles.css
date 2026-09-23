@@ -99,6 +99,19 @@ h3 { font-size: 21px; margin-bottom: 10px; }
 .section-tint { background: var(--soft); }
 .section-heading { max-width: 820px; margin-bottom: 46px; }
 .section-heading p:last-child, .guardrails > .container > div:first-child p:last-child { color: var(--muted); font-size: 18px; }
+.signs-section { padding-top: 0; }
+.signs-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 64px; align-items: center; }
+.signs-copy > p:not(.eyebrow) { color: var(--muted); font-size: 17px; }
+.evidence-contrast { display: grid; grid-template-columns: 1fr auto 1.25fr; gap: 16px; align-items: stretch; padding: 24px; border: 1px solid var(--line); border-radius: var(--radius); background: white; box-shadow: 0 18px 50px rgba(30,55,80,.08); }
+.contrast-item { padding: 22px; border-radius: 14px; }
+.contrast-item span { display: block; margin-bottom: 14px; font-size: 11px; font-weight: 850; letter-spacing: .11em; text-transform: uppercase; }
+.contrast-item blockquote { margin: 0; font-size: 18px; font-weight: 750; line-height: 1.45; }
+.contrast-label { background: #fbf8f1; }
+.contrast-label span { color: #8d6816; }
+.contrast-evidence { background: #f0f8f7; }
+.contrast-evidence span { color: #16766c; }
+.contrast-arrow { align-self: center; color: var(--gold); font-size: 28px; font-weight: 850; }
+.contrast-foot { grid-column: 1 / -1; margin: 0; color: var(--muted); font-size: 14px; text-align: center; }
 .figure-shell { background: white; border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; box-shadow: 0 18px 50px rgba(30,55,80,.08); }
 .framework-figure { margin: 44px 0 0; }
 .framework-figure figcaption { margin-top: 14px; color: var(--muted); font-size: 13px; }
@@ -320,6 +333,20 @@ blockquote { margin: 30px 0; padding: 6px 0 6px 24px; border-left: 4px solid var
   }
 }
 @media (max-width: 920px) {
+  .signs-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .evidence-contrast {
+    grid-template-columns: 1fr;
+  }
+  .contrast-arrow {
+    justify-self: center;
+    transform: rotate(90deg);
+  }
+  .contrast-foot {
+    grid-column: 1;
+  }
   .problem-grid {
     grid-template-columns: 1fr;
     gap: 28px;
